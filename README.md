@@ -1,4 +1,4 @@
-# HanbatHanStamp
+# 🎆HanbatHanStamp🎆
 <ul>
   <li>축제 때 학생들의 참여도와 부스 연결성 부족</li>
   <li>종이 스탬프의 번거로움  디지털 전환 필요</li>
