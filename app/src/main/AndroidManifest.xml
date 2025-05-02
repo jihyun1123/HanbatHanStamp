@@ -22,6 +22,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".HomeActivity"
+            tools:ignore="Instantiatable"></activity>
+        <activity android:name=".IntroduceActivity" />
+        <activity android:name=".BoothActivity" />
+        <activity android:name=".QRscanActivity" />
+        <activity android:name=".GiftActivity" />
+        <activity android:name=".FormActivity" />
+
     </application>
 
 </manifest>
