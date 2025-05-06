@@ -5,11 +5,8 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 public class GiftActivity extends AppCompatActivity {
 
@@ -23,7 +20,7 @@ public class GiftActivity extends AppCompatActivity {
         button19.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(GiftActivity.this, QRscanActivity.class);
+                Intent intent = new Intent(GiftActivity.this, QRScanActivity.class);
                 startActivity(intent);
             }
         });

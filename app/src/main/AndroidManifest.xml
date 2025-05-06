@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false"/>
+    <uses-permission android:name="android.permission.CAMERA" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -24,9 +27,17 @@
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".HomeActivity"
             tools:ignore="Instantiatable"></activity>
+        <activity android:name=".StampActivity" />
         <activity android:name=".IntroduceActivity" />
         <activity android:name=".BoothActivity" />
-        <activity android:name=".QRscanActivity" />
+        <activity
+            android:name=".QRScanActivity"
+            android:exported="false"  />
+        <activity
+            android:name=".PortraitCaptureActivity"
+            android:screenOrientation="portrait"
+            tools:replace="screenOrientation"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".GiftActivity" />
         <activity android:name=".FormActivity" />
 

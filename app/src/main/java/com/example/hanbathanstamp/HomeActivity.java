@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private ImageButton imageButton4, imageButton5, imageButton6, imageButton7, imageButton8;
+    private ImageButton imageButton3, imageButton4, imageButton5, imageButton6, imageButton7, imageButton8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,51 +16,32 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         // ImageButton 초기화
+        imageButton3 = findViewById(R.id.imageButton3);
         imageButton4 = findViewById(R.id.imageButton4);
         imageButton5 = findViewById(R.id.imageButton5);
         imageButton6 = findViewById(R.id.imageButton6);
         imageButton7 = findViewById(R.id.imageButton7);
         imageButton8 = findViewById(R.id.imageButton8);
 
-        // 클릭 리스너 설정
-        imageButton4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, IntroduceActivity.class);
-                startActivity(intent);
-            }
-        });
+        // 버튼 클릭 리스너 설정
+        setOnClickListener(imageButton3, StampActivity.class);  // StampActivity로 이동
+        setOnClickListener(imageButton4, IntroduceActivity.class);
+        setOnClickListener(imageButton5, BoothActivity.class);
+        setOnClickListener(imageButton6, QRScanActivity.class);
+        setOnClickListener(imageButton7, GiftActivity.class);
+        setOnClickListener(imageButton8, FormActivity.class);
+    }
 
-        imageButton5.setOnClickListener(new View.OnClickListener() {
+    // 공통 클릭 리스너 메서드
+    private void setOnClickListener(ImageButton imageButton, final Class<?> targetActivity) {
+        imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, BoothActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        imageButton6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, QRscanActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        imageButton7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, GiftActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        imageButton8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, FormActivity.class);
+                Intent intent = new Intent(HomeActivity.this, targetActivity);
                 startActivity(intent);
             }
         });
     }
 }
+
+
