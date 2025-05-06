@@ -17,52 +17,62 @@ public class LodingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loding);
 
-        // ImageView 참조
         firework1 = findViewById(R.id.firwork1);
         firework2 = findViewById(R.id.firework2);
         hani = findViewById(R.id.hani);
         nani = findViewById(R.id.nani);
 
-        // Scale 애니메이션
-        Animation scaleAnim1 = AnimationUtils.loadAnimation(this, R.anim.scale_animation);
-        Animation scaleAnim2 = AnimationUtils.loadAnimation(this, R.anim.scale_animation);
+        // 불꽃놀이 Scale 애니메이션 (firework1)
+        Animation firework1Anim = AnimationUtils.loadAnimation(this, R.anim.scale_animation);
+        firework1Anim.setDuration(2000);
 
-        // Translate 애니메이션
-        Animation translateAnim1 = AnimationUtils.loadAnimation(this, R.anim.translate_animation);
-        Animation translateAnim2 = AnimationUtils.loadAnimation(this, R.anim.translate_animation);
+        // firework2는 더 크고 위로 퍼지는 애니메이션
+        Animation firework2Anim = AnimationUtils.loadAnimation(this, R.anim.scale_up_translate_up);
+        firework2Anim.setDuration(2000);
 
-        // 애니메이션 리스너 설정
-        Animation.AnimationListener animationListener = new Animation.AnimationListener() {
+        // hani 위로 이동하는 애니메이션
+        Animation haniUpAnim = AnimationUtils.loadAnimation(this, R.anim.translate_up_animation);
+        haniUpAnim.setDuration(1000); // 1초로 속도 빠르게 설정
+
+        // hani 아래로 이동하는 애니메이션
+        Animation haniDownAnim = AnimationUtils.loadAnimation(this, R.anim.translate_down_animation);
+        haniDownAnim.setDuration(1000); // 1초로 속도 빠르게 설정
+
+        // nani 위로 이동하는 애니메이션
+        Animation naniUpAnim = AnimationUtils.loadAnimation(this, R.anim.translate_up_animation);
+        naniUpAnim.setDuration(1000); // 1초로 속도 빠르게 설정
+
+        // nani 아래로 이동하는 애니메이션
+        Animation naniDownAnim = AnimationUtils.loadAnimation(this, R.anim.translate_down_animation);
+        naniDownAnim.setDuration(1000); // 1초로 속도 빠르게 설정
+
+        // naniUpAnim 끝나면 -> LoginActivity 이동
+        naniUpAnim.setAnimationListener(new Animation.AnimationListener() {
             @Override
-            public void onAnimationStart(Animation animation) {
-                // 애니메이션 시작 시 동작 (필요시 추가)
-            }
+            public void onAnimationStart(Animation animation) {}
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                // 애니메이션 종료 후 LoginActivity로 이동
                 Intent intent = new Intent(LodingActivity.this, LoginActivity.class);
                 startActivity(intent);
-                finish();  // 현재 Activity 종료
+                finish();
             }
 
             @Override
-            public void onAnimationRepeat(Animation animation) {
-                // 애니메이션 반복 시 동작 (필요시 추가)
-            }
-        };
+            public void onAnimationRepeat(Animation animation) {}
+        });
 
-        // 애니메이션에 리스너 설정
-        scaleAnim1.setAnimationListener(animationListener);
-        scaleAnim2.setAnimationListener(animationListener);
-        translateAnim1.setAnimationListener(animationListener);
-        translateAnim2.setAnimationListener(animationListener);
+        // 애니메이션 반복 설정
+        haniUpAnim.setRepeatCount(1); // 1번 반복
+        haniUpAnim.setRepeatMode(Animation.REVERSE); // 반복 시 위아래로 번갈아 반복
+
+        naniUpAnim.setRepeatCount(1); // 1번 반복
+        naniUpAnim.setRepeatMode(Animation.REVERSE); // 반복 시 위아래로 번갈아 반복
 
         // 애니메이션 시작
-        firework1.startAnimation(scaleAnim1);
-        firework2.startAnimation(scaleAnim2);
-
-        hani.startAnimation(translateAnim1);
-        nani.startAnimation(translateAnim2);
+        firework1.startAnimation(firework1Anim);
+        firework2.startAnimation(firework2Anim);
+        hani.startAnimation(haniUpAnim);
+        nani.startAnimation(naniUpAnim);
     }
 }

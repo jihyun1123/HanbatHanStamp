@@ -9,18 +9,18 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="192dp"
-        android:layout_marginTop="508dp"
+        android:layout_width="267dp"
+        android:layout_height="309dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="496dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/hanbatui" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="351dp"
-        android:layout_height="407dp"
+        android:layout_width="319dp"
+        android:layout_height="381dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,6 +33,7 @@
         android:layout_height="49dp"
         android:text="로그인"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -57,27 +58,28 @@
         android:id="@+id/behindicon"
         android:layout_width="52dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginEnd="24dp"
         android:background="@android:color/transparent"
         android:contentDescription="비밀번호 보기 버튼"
         app:layout_constraintBottom_toTopOf="@+id/loginbutton"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="@+id/passwordtext"
-        app:layout_constraintVertical_bias="0.112"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/behindicon" />
 
     <EditText
         android:id="@+id/passwordtext"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginEnd="12dp"
         android:ems="10"
         android:hint="비밀번호 입력"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/loginbutton"
-        app:layout_constraintEnd_toStartOf="@+id/behindicon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logintext"
-        app:layout_constraintVertical_bias="0.415" />
+        app:layout_constraintVertical_bias="0.463" />
 
     <EditText
         android:id="@+id/logintext"
@@ -88,11 +90,11 @@
         android:hint="학번 입력"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/loginbutton"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/passwordtext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.381" />
+        app:layout_constraintVertical_bias="0.37" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
