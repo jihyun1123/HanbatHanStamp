@@ -24,10 +24,10 @@ public class HomeActivity extends AppCompatActivity {
         imageButton8 = findViewById(R.id.imageButton8);
 
         // 버튼 클릭 리스너 설정
-        setOnClickListener(imageButton3, StampActivity.class);  // StampActivity로 이동
+        setOnClickListener(imageButton3, StampActivity.class);
         setOnClickListener(imageButton4, IntroduceActivity.class);
         setOnClickListener(imageButton5, BoothActivity.class);
-        setOnClickListener(imageButton6, QRScanActivity.class);
+        setOnClickListener(imageButton6, StampActivity.class);
         setOnClickListener(imageButton7, GiftActivity.class);
         setOnClickListener(imageButton8, FormActivity.class);
     }
