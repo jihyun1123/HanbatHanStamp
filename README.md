@@ -20,22 +20,21 @@
 * 1인 개발 (프론트엔드)
 
 ## ⚙️ 개발 환경
-#### 🕹️ 기술스택
-  - 🖥 Front-End :
-      <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white">
-      <img src="https://img.shields.io/badge/Android%20Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white">
-      <img src="https://img.shields.io/badge/java-0095D5?style=for-the-badge&logo=java&logoColor=white">
-
-  - 🏡 환경 :
-      <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white">
-      <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white">     
-
-  - 💬 기타 도구 :
-      <img src="https://img.shields.io/badge/ChatGPT-10A37F?style=for-the-badge&logo=openai&logoColor=white">
 
 <br/><br/>
 * java version "23.0.2"
 * Gradle version "8.10.2"
+* 🖥 Front-End :
+      <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white">
+      <img src="https://img.shields.io/badge/Android%20Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white">
+      <img src="https://img.shields.io/badge/java-0095D5?style=for-the-badge&logo=java&logoColor=white">
+
+*🏡 환경 :
+      <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white">
+      <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white">     
+
+💬 기타 도구 :
+      <img src="https://img.shields.io/badge/ChatGPT-10A37F?style=for-the-badge&logo=openai&logoColor=white">
 <br>
 
 ## 📌주요기능
